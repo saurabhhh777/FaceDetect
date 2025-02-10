@@ -17,7 +17,7 @@ const App = () => {
 
     setInterval(() => {
       handleDetect(net);
-    }, 10);
+    }, 1000);
   };
 
   const handleDetect = async (net) => {
@@ -50,12 +50,23 @@ const App = () => {
 
   return (
     <div>
+      <div style={{
+        fontFamily:"Poppins",
+        textAlign:"center",
+        fontSize:"40px",
+        fontWeight:"600",
+        font:"white",
+      }}>
+        Face Detection
+      </div>
       <Webcam
         ref={webcamRef}
         style={{
           position: "absolute",
+          marginTop:"30px",
           marginLeft: "auto",
           marginRight: "auto",
+          borderRadius:"4px",
           left: 0,
           right: 0,
           textAlign: "center",
@@ -68,7 +79,9 @@ const App = () => {
         ref={canvasRef}
         style={{
           position: "absolute",
+          marginTop:"30px",
           marginLeft: "auto",
+          borderRadius:"4px",
           marginRight: "auto",
           left: 0,
           right: 0,
