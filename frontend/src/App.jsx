@@ -17,7 +17,7 @@ const App = () => {
 
     setInterval(() => {
       handleDetect(net);
-    }, 1000);
+    }, 100);
   };
 
   const handleDetect = async (net) => {
